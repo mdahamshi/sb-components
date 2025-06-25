@@ -1,29 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Reusable Dropdown Menu</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Reusable Dropdown Menu</title>
+  </head>
+  <body>
+    <div class="dropdown" data-trigger="click">
+      <button class="dropdown-toggle">Menu 1</button>
+      <ul class="dropdown-menu">
+        <li><a href="#">Item 1</a></li>
+        <li><a href="#">Item 2</a></li>
+        <li><a href="#">Item 3</a></li>
+      </ul>
+    </div>
 
-</head>
-<body>
+    <div class="dropdown" data-trigger="hover">
+      <button class="dropdown-toggle">Menu 2</button>
+      <ul class="dropdown-menu">
+        <li><a href="#">Another 1</a></li>
+        <li><a href="#">Another 2</a></li>
+      </ul>
+    </div>
 
-  <div class="dropdown" data-trigger="click">
-    <button class="dropdown-toggle">Menu 1</button>
-    <ul class="dropdown-menu">
-      <li><a href="#">Item 1</a></li>
-      <li><a href="#">Item 2</a></li>
-      <li><a href="#">Item 3</a></li>
-    </ul>
-  </div>
-
-  <div class="dropdown" data-trigger="hover">
-    <button class="dropdown-toggle">Menu 2</button>
-    <ul class="dropdown-menu">
-      <li><a href="#">Another 1</a></li>
-      <li><a href="#">Another 2</a></li>
-    </ul>
-  </div>
-
-  <script type="module" src="dev.js"></script>
-</body>
+    <script type="module" src="dev.js"></script>
+  </body>
 </html>

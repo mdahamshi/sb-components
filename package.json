@@ -9,7 +9,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "rollup -c",
+    "format": "npx prettier --write .",
+    "build": "npm run format && rollup -c",
     "prepare": "npm run build",
     "test": "vitest",
     "dev": "vite"

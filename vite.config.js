@@ -1,3 +1,3 @@
 export default {
-  root: './dev', // root of your project
+  root: "./dev", // root of your project
 };

@@ -1,20 +1,20 @@
 // rollup.config.js
-import resolve from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
-import postcss from 'rollup-plugin-postcss';
+import resolve from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
+import postcss from "rollup-plugin-postcss";
 
 export default {
-  input: 'src/index.js',
+  input: "src/index.js",
   output: {
-    file: 'dist/index.js',
-    format: 'esm',
+    file: "dist/index.js",
+    format: "esm",
     sourcemap: true,
   },
   plugins: [
     resolve(),
     commonjs(),
     postcss({
-      extract: 'style.css',
+      extract: "style.css",
       minimize: true,
     }),
   ],
