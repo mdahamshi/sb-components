@@ -1,7 +1,7 @@
 {
-  "name": "@sarawebs/sb-utils",
+  "name": "@sarawebs/sb-components",
   "version": "1.0.0",
-  "description": "SaraWebs utility functions for web apps and tools",
+  "description": "SaraWebs components for web apps and tools",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -11,10 +11,11 @@
   "scripts": {
     "build": "rollup -c",
     "prepare": "npm run build",
-    "test": "vitest"
+    "test": "vitest",
+    "dev": "vite"
   },
   "keywords": [
-    "utilities",
+    "components",
     "frontend",
     "sarawebs",
     "web-tools"
@@ -23,15 +24,20 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mdahamshi/sb-utils.git"
+    "url": "https://github.com/mdahamshi/sb-components.git"
   },
   "publishConfig": {
     "access": "public"
   },
   "devDependencies": {
+    "@eslint/css": "^0.9.0",
+    "@eslint/js": "^9.29.0",
     "@rollup/plugin-commonjs": "^28.0.6",
     "@rollup/plugin-node-resolve": "^16.0.1",
+    "eslint": "^9.29.0",
     "rollup": "^4.44.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "vite": "^7.0.0",
     "vitest": "^3.2.4"
   }
 }
