@@ -56,7 +56,7 @@ npm install @sarawebs/sb-components
 #### JS Usage
 
 ```js
-"@sarawebs/sb-components/Dropdown/style"; // basic styles
+import "@sarawebs/sb-components/Dropdown/style"; // basic styles
 import { Dropdown } from '@sarawebs/sb-components/Dropdown';
 
 document.querySelectorAll('.dropdown').forEach(dropdownEl => {
