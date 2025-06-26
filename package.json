@@ -3,6 +3,18 @@
   "version": "1.0.1",
   "description": "SaraWebs components for web apps and tools",
   "main": "dist/index.js",
+  "exports": {
+    "./Dropdown": {
+      "import": "./dist/Dropdown/index.js",
+      "default": "./dist/Dropdown/index.js"
+    },
+    "./Dropdown/style": "./dist/Dropdown/Dropdown.css",
+    "./Carousel": {
+      "import": "./dist/Carousel/index.js",
+      "default": "./dist/Carousel/index.js"
+    },
+    "./Carousel/style": "./dist/Carousel/Carousel.css"
+  },
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [

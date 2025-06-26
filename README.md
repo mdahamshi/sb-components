@@ -56,8 +56,8 @@ npm install @sarawebs/sb-components
 #### JS Usage
 
 ```js
-import '@sarawebs/sb-components/dist/style.css';
-import { Dropdown } from '@sarawebs/sb-components';
+"@sarawebs/sb-components/Dropdown/style"; // basic styles
+import { Dropdown } from '@sarawebs/sb-components/Dropdown';
 
 document.querySelectorAll('.dropdown').forEach(dropdownEl => {
   new Dropdown(dropdownEl);
@@ -101,6 +101,102 @@ document.querySelectorAll('.dropdown').forEach(dropdownEl => {
 You can style or animate however you like. The module doesn’t enforce design.
 
 ---
+
+
+### 🖼️ Component: Carousel
+
+A lightweight, reusable **Image Carousel** component built with zero dependencies, perfect for showcasing images in client dashboards, landing pages, and web apps.
+
+Designed with a clean class-based architecture following the same composition principles as the Dropdown component.
+
+---
+
+### 🎯 Features
+
+* ⬅️➡️ **Arrow Controls** — Navigate forward and backward through images
+* 🔄 **Auto Slide** — Automatically advances every N milliseconds
+* ⚫ **Navigation Dots** — Visual indicators that are clickable to jump to any slide
+* 🧱 **Composable & Reusable** — Easily instantiate multiple carousels on a page
+* 🔧 **Dynamic Content** — Accepts an array of image URLs to render slides
+* ⏱️ **Custom Timer** — Configure auto-slide delay via constructor
+* ⚙️ **No Dependencies** — Pure vanilla JS with modular class design
+
+---
+
+### 📚 Usage
+
+#### HTML Setup
+
+Only an empty container is required. The component will dynamically populate it.
+
+```html
+<div id="carousel-container"></div>
+```
+
+#### JS Initialization
+
+```js
+import "@sarawebs/sb-components/Carousel/style"; // Basic styles
+import { Carousel } from "@sarawebs/sb-components/Carousel";
+
+const images = [
+  'https://picsum.photos/id/1015/800/300',
+  'https://picsum.photos/id/1016/800/300',
+  'https://picsum.photos/id/1018/800/300',
+];
+
+const container = document.getElementById('carousel-container');
+
+// 5-second timer (default)
+new Carousel(container, images);
+
+// OR with a custom interval (e.g., 3 seconds)
+new Carousel(container, images, 3000);
+```
+
+---
+![screenshot](./sc.png)
+
+### ⚙️ Class: `Carousel`
+
+| Parameter                   | Type      | Description                                |
+| --------------------------- | --------- | ------------------------------------------ |
+| `root`                      | Element   | HTML element to render the carousel inside |
+| `images`                    | string\[] | Array of image URLs                        |
+| `autoSlideDelay` (optional) | number    | Time in ms between slides (default: 5000)  |
+
+---
+
+| Method             | Description                               |
+| ------------------ | ----------------------------------------- |
+| `moveToSlide(n)`   | Moves carousel to the nth slide (0-based) |
+| `startAutoSlide()` | Starts the auto-slide loop                |
+| `stopAutoSlide()`  | Stops the auto-slide loop                 |
+
+---
+
+### 💡 Use Cases
+
+* Homepage hero sliders
+* Product image galleries
+* Testimonials rotators
+* Portfolio slideshows
+* Embedded widgets in client dashboards
+
+---
+
+### 🚀 Integration
+
+This component is built in the same modular style as other **SaraWebs** UI primitives like `Dropdown`, `Modal`, and upcoming tools — enabling consistent development across internal tools, marketing sites, and client-facing applications.
+
+---
+
+Let me know if you’d like to:
+
+* Add pause/resume buttons
+* Support swipe/touch gestures
+* Export this as an ES module or NPM package
+
 
 ### 🛠️ Planned Components
 
